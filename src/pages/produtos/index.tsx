@@ -21,7 +21,7 @@ export default function Produtos() {
 
       <main>
         <h1>
-          Produtos
+          Aqui vai a listagem dos produtos!
         </h1>
       </main>
 

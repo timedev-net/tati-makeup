@@ -22,7 +22,7 @@ export default function Home() {
       <main>
         <h1>
           <Title/>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Essa é a página inicial
         </h1>
       </main>
 
