@@ -1,5 +1,6 @@
 // import styled from 'styled-components'
-import { ActiveLink } from './ActiveLink'
+// import { ActiveLink } from './ActiveLink'
+import Link from 'next/link';
 
 // const Header = styled.h1`
 //   color: red;
@@ -11,12 +12,13 @@ export function Header() {
     <header>
       <h1>meu Headeer</h1>
       <div>
-        <ActiveLink href='/'>
+        
+        <Link href='/'>
           <a>Home</a>
-        </ActiveLink>
-        <ActiveLink href='/produtos'>
+        </Link>
+        <Link href='/produtos'>
           <a>Produtos</a>
-        </ActiveLink>
+        </Link>
       </div>
     </header>
   )
