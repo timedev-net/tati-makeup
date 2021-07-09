@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
 import { useDispatch } from 'react-redux'
-import sistemasActions from '../store/actions/sistemasActions'
-import Title from '../components/Title'
+import sistemasActions from '../../store/actions/sistemasActions'
 
-export default function Home() {
+
+export default function Produtos() {
 
   // const redux = useSelector(state => state)
   const dispatch = useDispatch()
@@ -16,13 +16,12 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <title>Produtos</title>
       </Head>
 
       <main>
         <h1>
-          <Title/>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Produtos
         </h1>
       </main>
 

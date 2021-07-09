@@ -5,6 +5,7 @@ import { createGlobalStyle } from 'styled-components'
 import 'antd/dist/antd.css';
 import { ConfigProvider } from 'antd';
 import ptBR from 'antd/lib/locale/pt_BR';
+import { Header } from '../components/Header'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <ConfigProvider locale={ptBR}>
         <GlobalStyle/>
+        <Header/>
         <Component {...pageProps} />
       </ConfigProvider>
     </Provider>
