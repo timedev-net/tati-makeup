@@ -1,22 +1,17 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import sistemasActions from '../store/actions/sistemasActions'
 import Title from '../components/Title'
 
 export default function Home() {
 
-  const redux = useSelector(state => state)
+  // const redux = useSelector(state => state)
   const dispatch = useDispatch()
   
   useEffect(() => {
     dispatch(sistemasActions.edit_mode_sistemas(true))
   }, [])
-
-  useEffect(() => {
-    console.log(redux.sistemasReducer)
-  }, [redux])
 
   return (
     <div>
