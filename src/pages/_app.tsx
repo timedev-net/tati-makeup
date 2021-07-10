@@ -7,6 +7,7 @@ import { ConfigProvider } from 'antd';
 import ptBR from 'antd/lib/locale/pt_BR';
 import { Header } from '../components/Header'
 import { AuthProvider } from "../contexts/AuthContext"
+import { Layout } from 'antd';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -31,7 +32,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <AuthProvider>
         <ConfigProvider locale={ptBR}>
           <GlobalStyle/>
-          <Header/>
+          <Layout className="layout">
+            <Header/>
+          </Layout>
+            
           <Component {...pageProps} />
         </ConfigProvider>
       </AuthProvider>

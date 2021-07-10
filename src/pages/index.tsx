@@ -2,11 +2,13 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 import { useDispatch } from 'react-redux'
 import sistemasActions from '../store/actions/sistemasActions'
-import Title from '../components/Title'
+import { Layout } from 'antd';
+import { Sessao1, Sessao2 } from '../components/LandingPage'
 
 export default function Home() {
-
+  const { Content, Footer } = Layout;
   // const redux = useSelector(state => state)
+
   const dispatch = useDispatch()
   
   useEffect(() => {
@@ -18,17 +20,16 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
+      <Sessao1/>
+      <Sessao2/>
+      <Sessao1/>
 
-      <main>
-        <h1>
-          <Title/>
-          Essa é a página inicial
-        </h1>
-      </main>
+      <Content style={{ padding: '0 50px' }}>        
+        <div className="site-layout-content">Content</div>
+      </Content>
 
-      <footer>
-       
-      </footer>
+      <Footer style={{ textAlign: 'center' }}>Tati Nogueira Makeup & Acessórios ©2021</Footer>
+      
     </div>
   )
 }
