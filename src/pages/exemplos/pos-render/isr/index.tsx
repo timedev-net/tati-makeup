@@ -12,7 +12,7 @@ function ISR() {
       </Head>
 
       <main>
-        <h1>Regeneração Estática Incremental (ISR)</h1>
+        <h1 style={{ color: 'red' }}>Regeneração Estática Incremental (ISR)</h1>
         {/* <h1>Renderização do lado do cliente:</h1>
         <h2>Recebe o html seco contendo todo o javascript que modifica o html no lado do cliente.</h2>
 
@@ -46,31 +46,28 @@ Quando uma solicitação é feita para um caminho que não foi gerado, Next.js i
   )
 }
 
-export async function getStaticProps() {
-  const res = await fetch('https://.../posts')
-  const posts = await res.json()
+// export async function getStaticProps() {
+//   const res = await fetch('https://.../posts')
+//   const posts = await res.json()
 
-  return {
-    props: {
-      posts,
-    },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 10, // In seconds
-  }
-}
+//   return {
+//     props: {
+//       posts,
+//     },
+//     revalidate: 10, // In seconds
+//   }
+// }
 
 
-export async function getStaticPaths() {
-  const res = await fetch('https://.../posts')
-  const posts = await res.json()
+// export async function getStaticPaths() {
+//   const res = await fetch('https://.../posts')
+//   const posts = await res.json()
 
-  const paths = posts.map((post) => ({
-    params: { id: post.id },
-  }))
+//   const paths = posts.map((post) => ({
+//     params: { id: post.id },
+//   }))
 
-  return { paths, fallback: 'blocking' }
-}
+//   return { paths, fallback: 'blocking' }
+// }
 
 export default ISR
